@@ -41,10 +41,10 @@
       }
     </script>
     
-    <!-- STEP 1: Add Babel to translate TSX/JSX for the browser -->
+    <!-- STEP 1: Babel to translate TSX/JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <!-- STEP 2: Use a CORRECT and NON-CONFLICTING import map for React 18 -->
+    <!-- STEP 2: A CLEAN and CORRECT import map for React 18. All conflicting entries have been removed. -->
     <script type="importmap">
 {
   "imports": {
@@ -56,12 +56,11 @@
   }
 }
 </script>
-
   </head>
   <body class="bg-brand-extralight font-sans text-gray-800 antialiased">
     <div id="root"></div>
     
-    <!-- STEP 3: Use a relative path and tell the browser to use Babel -->
+    <!-- STEP 3: Load the main script using Babel -->
     <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>
