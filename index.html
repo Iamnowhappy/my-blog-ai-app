@@ -40,19 +40,27 @@
         }
       }
     </script>
-  <script type="importmap">
+    
+    <!-- STEP 1: Add Babel to translate TSX/JSX for the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- STEP 2: Use a correct and stable import map for React 18 -->
+    <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.1.1",
-    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@0.14.0",
     "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.14.0"
+    "react/": "https://esm.sh/react@^19.1.1/"
   }
 }
 </script>
-</head>
+  </head>
   <body class="bg-brand-light font-sans text-gray-800 antialiased">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    
+    <!-- STEP 3: Tell the browser to use Babel for your main script file -->
+    <script type="text/babel" data-type="module" src="/index.tsx"></script>
   </body>
 </html>
