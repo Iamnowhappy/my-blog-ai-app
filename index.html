@@ -44,7 +44,7 @@
     <!-- STEP 1: Add Babel to translate TSX/JSX for the browser -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <!-- STEP 2: Use a correct and stable import map for React 18 -->
+    <!-- STEP 2: Use a CORRECT and NON-CONFLICTING import map for React 18 -->
     <script type="importmap">
 {
   "imports": {
@@ -60,7 +60,7 @@
   <body class="bg-brand-light font-sans text-gray-800 antialiased">
     <div id="root"></div>
     
-    <!-- STEP 3: Tell the browser to use Babel for your main script file -->
-    <script type="text/babel" data-type="module" src="/index.tsx"></script>
+    <!-- STEP 3: Use a relative path and tell the browser to use Babel -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>
