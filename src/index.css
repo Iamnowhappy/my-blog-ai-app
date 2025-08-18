@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* optional - for better prose formatting */
+@layer components {
+  /* Custom components if any */
+}
