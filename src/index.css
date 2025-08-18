@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* optional - for better prose formatting */
-@layer components {
-  /* Custom components if any */
+body {
+  @apply font-sans bg-brand-extralight text-gray-800;
 }

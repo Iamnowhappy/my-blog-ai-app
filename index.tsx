@@ -1,16 +1,16 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './index.css' // Tailwind 스타일 적용 시 필요
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+const rootElement = document.getElementById('root') as HTMLElement
 
-const rootElement = document.getElementById('root');
 if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
+  throw new Error("Root element not found")
 }
 
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);
+)
